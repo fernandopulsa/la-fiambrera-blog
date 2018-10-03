@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const Navbar = () => (
-  <nav className="navbar is-transparent">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item title">
+  <nav className="">
+    <div className="">
+      <div className="">
+        <Link to="/" className="title">
         La Fiambrera  
          {/* <figure className="image">
             <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
