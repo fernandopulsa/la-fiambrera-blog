@@ -11,18 +11,19 @@ export const BlogPostTemplate = ({
   contentComponent,
   description,
   tags,
+  linkaudio,
   title,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+      <div className="">
+        <div className="">
+          <div className="">
+            <h1 className="">
               {title}
             </h1>
             <p>{description}</p>
@@ -31,7 +32,7 @@ export const BlogPostTemplate = ({
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
-                <ul className="taglist">
+                <ul className="">
                   {tags.map(tag => (
                     <li key={tag + `tag`}>
                       <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>

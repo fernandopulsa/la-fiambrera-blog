@@ -10,30 +10,27 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Episodios</h1>
-            </div>
+        <section className="">
+          <div className="">
             {posts
               .map(({ node: post }) => (
                 <div
-                  className="content"
-                  style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+                  className=""
                   key={post.id}
                 >
                   <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
+                    <Link className="" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
+                    <p>{post.frontmatter.linkaudio}</p>
                     <small>{post.frontmatter.date}</small>
                   </p>
                   <p>
                     {post.excerpt}
                     <br />
                     <br />
-                    <Link className="button is-small" to={post.fields.slug}>
+                    <Link className="" to={post.fields.slug}>
                       Keep Reading →
                     </Link>
                   </p>
@@ -69,6 +66,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            linkaudio
             templateKey
             date(formatString: "MMMM DD, YYYY")
           }
