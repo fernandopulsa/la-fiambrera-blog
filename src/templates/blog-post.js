@@ -10,7 +10,7 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
-  tags,
+  //tags,
   linkaudio,
   title,
   helmet,
@@ -18,18 +18,19 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="">
+    <section className="episode_detail_wrapper">
       {helmet || ''}
       <div className="">
         <div className="">
           <div className="">
-            <h1 className="">
+            <h1 className="title color_corpo">
               {title}
             </h1>
-            <p>{description}</p>
-            <p>{linkaudio}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
+            <PostContent content={content} className="description" />
+            <div className="audio_wrapper">
+              <audio src={linkaudio} controls></audio>
+            </div>
+            {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="">
@@ -40,7 +41,7 @@ export const BlogPostTemplate = ({
                   ))}
                 </ul>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
         </div>
       </div>

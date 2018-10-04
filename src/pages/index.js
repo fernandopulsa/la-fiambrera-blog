@@ -11,19 +11,19 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <section className="podcast_wrapper">
-          <div className="podcast_wrapper_item">
+          <div className="">
             {posts
               .map(({ node: post }) => (
-                <div className="" key={post.id}>
-                  <p>
-                    <Link className="title color_corpo" to={post.fields.slug}>
+                <div className="podcast_wrapper_item" key={post.id}>
+                  <p className="title">
+                    <Link className="color_corpo" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
                   </p>
-                  <p>
-                   <small>{post.frontmatter.date}</small>
+                  <p className="date">
+                    {post.frontmatter.date}
                   </p>
-                  <p className="text">
+                  <p className="description">
                     {post.excerpt}
                   </p>
                   <div className="audio_wrapper">

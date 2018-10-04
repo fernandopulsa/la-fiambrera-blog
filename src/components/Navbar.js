@@ -9,11 +9,18 @@ const Navbar = () => (
         {/* <Link to="/" className="title">
             <img src={logo} alt="logo" className="logo-img" />
         </Link> */}
+
         <Link to="/" className="title">
             <img src={caratula} alt="logo" className="logo-img" />
         </Link>
       </div>
-      <div className="navbar-start">
+      <div className="RRSS_wrapper">
+        <p className="RRSS_item color_corpo">
+          <a href="https://twitter.com/fiambreraxyz">Twitter</a>
+        </p>
+        <p className="RRSS_item color_corpo">
+          <a href="https://www.instagram.com/fiambreraxyz/">Instagram</a>
+        </p>
         {/* <Link className="navbar-item" to="/about">
           About
         </Link>
