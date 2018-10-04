@@ -10,7 +10,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section className="">
+        <section className="podcast_wrapper">
           <div className="">
             {posts
               .map(({ node: post }) => (
@@ -22,16 +22,19 @@ export default class IndexPage extends React.Component {
                     <Link className="" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <p>{post.frontmatter.linkaudio}</p>
-                    <small>{post.frontmatter.date}</small>
+                    {/* <p>{post.frontmatter.linkaudio}</p> */}
                   </p>
                   <p>
+                   <small>{post.frontmatter.date}</small>
+                  </p>
+
+                  <div className="audio_wrapper">
+                    <audio src={post.frontmatter.linkaudio} controls></audio>
+                  </div>
+                  <p>
                     {post.excerpt}
-                    <br />
-                    <br />
                     <Link className="" to={post.fields.slug}>
-                      Keep Reading →
+                      Ver notas del programa
                     </Link>
                   </p>
                 </div>

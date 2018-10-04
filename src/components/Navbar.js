@@ -1,15 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import logo from '../img/fiambrera-logo.png'
 
 const Navbar = () => (
-  <nav className="">
-    <div className="">
-      <div className="">
+  <nav>
+      <div className="logo_wrapper">
         <Link to="/" className="title">
-        La Fiambrera  
-         {/* <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure> */}
+            <img src={logo} alt="logo" className="logo-img" />
         </Link>
       </div>
       <div className="navbar-start">
@@ -20,7 +17,6 @@ const Navbar = () => (
           Products
         </Link> */}
       </div>
-    </div>
   </nav>
 )
 
