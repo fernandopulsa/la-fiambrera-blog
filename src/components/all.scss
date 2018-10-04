@@ -5,11 +5,18 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
-body, html {
-    background-color: #fff5e9;
+a {
+    text-decoration: none;
+    color: inherit;
 }
-// Config va$kaldi-red: #FD461
+body, html {
+    //background-color: #fff5e9;
+}
+$corpo: #db2e21;
+
+.color_corpo {
+    color: $corpo;
+}
 
 .body_wrapper {
     width: 90%;
@@ -38,9 +45,27 @@ nav {
     max-width: 700px;
     display: flex;
     justify-content: center;
-}
 
-.audio_wrapper audio {
-    width: 100%;
-    margin: 8px 0;
+    .podcast_wrapper_item {
+        .title {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+        .audio_wrapper audio {
+            width: 100%;
+            margin: 16px 0;
+        }
+        .view_more_btn {
+            padding: 10px 9px;
+            background-color: $corpo;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            width: 100%;
+
+            @media screen and (min-width: 700px) {
+                width: 230px;
+            }
+        }
+    }
 }

@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../img/fiambrera-logo.png'
+// import logo from '../img/fiambrera-logo.png'
+import caratula from '../img/caratula.png'
 
 const Navbar = () => (
   <nav>
       <div className="logo_wrapper">
-        <Link to="/" className="title">
+        {/* <Link to="/" className="title">
             <img src={logo} alt="logo" className="logo-img" />
+        </Link> */}
+        <Link to="/" className="title">
+            <img src={caratula} alt="logo" className="logo-img" />
         </Link>
       </div>
       <div className="navbar-start">
