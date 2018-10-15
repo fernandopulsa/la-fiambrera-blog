@@ -110,6 +110,10 @@ nav {
     max-width: 700px;
     display: flex;
     justify-content: center;
+
+    .description p {
+        margin-bottom: 16px;
+    }
 }
 
 
