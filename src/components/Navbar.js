@@ -34,6 +34,9 @@ const Navbar = () => (
           <a target="blank" href="https://overcast.fm/itunes1437938605/la-fiambrera">Overcast</a>
         </p>
         <p className="RRSS_item color_corpo">
+            |
+        </p>
+        <p className="RRSS_item color_corpo">
           <a target="blank" href="https://twitter.com/fiambreraxyz">Twitter</a>
         </p>
         <p className="RRSS_item color_corpo">
