@@ -14,6 +14,7 @@ export const BlogPostTemplate = ({
   linkaudio,
   title,
   helmet,
+  date
 }) => {
   const PostContent = contentComponent || Content
 
@@ -26,6 +27,9 @@ export const BlogPostTemplate = ({
             <h1 className="title color_corpo">
               {title}
             </h1>
+            <p className="date">
+                    {date}
+                  </p>
             <PostContent content={content} className="description" />
             <div className="audio_wrapper">
               <audio src={linkaudio} controls></audio>
@@ -55,6 +59,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   linkaudio: PropTypes.string,
   title: PropTypes.string,
+  date: PropTypes.date,
   helmet: PropTypes.instanceOf(Helmet),
 }
 
@@ -71,6 +76,7 @@ const BlogPost = ({ data }) => {
         helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        date={post.frontmatter.date}
       />
     </Layout>
   )
@@ -90,7 +96,7 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM, YYYY")
         title
         description
         linkaudio
