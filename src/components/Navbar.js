@@ -16,13 +16,16 @@ const Navbar = () => (
               <img src={caratula} alt="logo" className="logo-img" />
           </Link>
         </div>
-        <div className="wrapper">
+        {/* <div className="wrapper">
          <p>¡Un pdodcast to gupao</p>
-        </div>
+        </div> */}
       </div>
       <div className="RRSS_wrapper">
         <p className="listen_item color_corpo">
           <a target="blank" href="https://www.spreaker.com/show/3170279/episodes/feed">RSS Feed</a>
+        </p>
+        <p className="listen_item color_corpo">
+          <a target="blank" href="https://www.spreaker.com/show/la-fiambrera">Spreaker</a>
         </p>
         <p className="listen_item color_corpo">
           <a target="blank" href="https://open.spotify.com/show/3NPtLDGBNOdrZsrSbreyI2?si=PPBUtmCfTQW3KIJfeSUxTg">Spotify</a>
