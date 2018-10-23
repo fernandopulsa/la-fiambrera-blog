@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "prettier": "^1.7.4",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "sass-lint": "^1.12.1"
   }
 }
