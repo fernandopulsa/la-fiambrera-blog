@@ -48,12 +48,22 @@ $corpo: #db2e21;
 
 .podcast_wrapper {
   width: 100%;
-  max-width: 700px;
+  max-width: 900px;
   display: flex;
   justify-content: center;
 
   .podcast_wrapper_item {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
     margin-bottom: 70px;
+
+    .cover_wrapper {
+      padding: 0 20px 0 0 ;
+      img {
+        max-width: 200px;
+      }
+    }
     .date {
       margin-bottom: 16px;
       opacity: 0.7;
