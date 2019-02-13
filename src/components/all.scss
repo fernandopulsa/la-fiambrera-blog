@@ -1,12 +1,12 @@
-@import 'style-comp/reset';
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import "style-comp/reset";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   color: #333;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -19,17 +19,18 @@ $corpo: #db2e21;
 .color_corpo {
   color: $corpo;
 }
-
+main {
+  min-height: 100vw;
+}
 .body_wrapper {
   align-items: center;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 100vw;
   width: 90%;
 }
 
-@import 'style-comp/nav_comp';
+@import "style-comp/nav_comp";
 
 .title {
   font-size: 1.5em;
@@ -85,10 +86,10 @@ $corpo: #db2e21;
 
   .date {
     margin-bottom: 16px;
-    opacity: .7;
+    opacity: 0.7;
   }
 
-  .description  {
+  .description {
     p {
       margin-bottom: 16px;
     }
@@ -97,7 +98,7 @@ $corpo: #db2e21;
 
 footer {
   margin-bottom: 20px;
-
+  text-align: center;
   a {
     border-bottom: 2px solid #33333325;
   }

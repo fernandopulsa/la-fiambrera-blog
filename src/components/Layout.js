@@ -1,18 +1,20 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from "react";
+import Helmet from "react-helmet";
 
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-import './all.scss'
+import "./all.scss";
 
 const TemplateWrapper = ({ children }) => (
-  <div className="body_wrapper">
+  <main>
     <Helmet title="La Fiambrera" />
-    <Navbar />
-    <div>{children}</div>
+    <div className="body_wrapper">
+      <Navbar />
+      <div>{children}</div>
+    </div>
     <Footer />
-  </div>
-)
+  </main>
+);
 
-export default TemplateWrapper
+export default TemplateWrapper;
