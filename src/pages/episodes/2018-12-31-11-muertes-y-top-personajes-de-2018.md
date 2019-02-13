@@ -12,6 +12,7 @@ description: >-
   nuestra amiga y compañera a ayudarnos ha hacer el repaso ¡¡Esperamos que os
   guste!!
 linkaudio: 'https://api.spreaker.com/v2/episodes/16599573/download.mp3'
+cover: /img/11-fiambrera.jpg
 tags:
   - pod
 ---
