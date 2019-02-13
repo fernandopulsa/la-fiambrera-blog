@@ -10,6 +10,7 @@ description: >-
   Este nuevo episodio estrena el otro nuevo formato. Noticias random a tope y
   está vez, de nuevo, con la compañía de nuestro tatuador de cabecera, Rodri.
 linkaudio: 'https://api.spreaker.com/v2/episodes/15881661/download.mp3'
+cover: /img/02-fiambrera.jpg
 tags:
   - pod
 ---
