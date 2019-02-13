@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 //import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
 
 export const BlogPostTemplate = ({
   content,
@@ -16,23 +16,19 @@ export const BlogPostTemplate = ({
   helmet,
   date
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
   return (
     <section className="episode_detail_wrapper">
-      {helmet || ''}
+      {helmet || ""}
       <div className="">
         <div className="">
           <div className="">
-            <h1 className="title color_corpo">
-              {title}
-            </h1>
-            <p className="date">
-                    {date}
-                  </p>
+            <h1 className="title color_corpo">{title}</h1>
+            <p className="date">{date}</p>
             <PostContent content={content} className="description" />
             <div className="audio_wrapper">
-              <audio src={linkaudio} controls></audio>
+              <audio src={linkaudio} controls />
             </div>
             {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -50,8 +46,8 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
@@ -60,11 +56,11 @@ BlogPostTemplate.propTypes = {
   linkaudio: PropTypes.string,
   title: PropTypes.string,
   date: PropTypes.date,
-  helmet: PropTypes.instanceOf(Helmet),
-}
+  helmet: PropTypes.instanceOf(Helmet)
+};
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
@@ -79,16 +75,16 @@ const BlogPost = ({ data }) => {
         date={post.frontmatter.date}
       />
     </Layout>
-  )
-}
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
+    markdownRemark: PropTypes.object
+  })
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -101,7 +97,8 @@ export const pageQuery = graphql`
         description
         linkaudio
         tags
+        cover
       }
     }
   }
-`
+`;
