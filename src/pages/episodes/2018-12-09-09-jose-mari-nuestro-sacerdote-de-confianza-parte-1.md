@@ -4,6 +4,7 @@ title: '09 - Jose Mari, nuestro sacerdote de confianza (Parte 1)'
 date: 2018-12-09T20:15:13.975Z
 description: "Otro episodio, otra entrevista, y esta vez, una muy especial. Nuestro invitado esta semana es Jose Mari, sacerdote en el Grao de Castellón, que se prestado a charlar con nosotros y a enseñarnos el mundo de la iglesia desde dentro, pasando por lo temas de la actualidad más candente. Esperamos que os guste tanto como a nosotros nos ha gustado grabarlo \U0001F604"
 linkaudio: 'https://api.spreaker.com/v2/episodes/16425591/download.mp3'
+cover: /img/09-fiambrera.jpg
 tags:
   - pod
 ---
