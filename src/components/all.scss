@@ -1,12 +1,12 @@
-@import 'style-comp/reset';
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import "style-comp/reset";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   color: #333;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -29,7 +29,7 @@ $corpo: #db2e21;
   width: 90%;
 }
 
-@import 'style-comp/nav_comp';
+@import "style-comp/nav_comp";
 
 .title {
   font-size: 1.5em;
@@ -48,12 +48,29 @@ $corpo: #db2e21;
 
 .podcast_wrapper {
   width: 100%;
-  max-width: 700px;
+  max-width: 900px;
   display: flex;
   justify-content: center;
 
   .podcast_wrapper_item {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 650px) {
+      grid-template-columns: 1fr 4fr;
+    }
+
     margin-bottom: 70px;
+
+    .cover_wrapper {
+      padding: 0 20px 0 0;
+      text-align: center;
+      margin-bottom: 32px;
+      img {
+        max-width: 200px;
+        box-shadow: 0px 0 6px 0px #00000042;
+      }
+    }
     .date {
       margin-bottom: 16px;
       opacity: 0.7;
@@ -83,12 +100,21 @@ $corpo: #db2e21;
   max-width: 700px;
   width: 100%;
 
+  .cover_wrapper {
+    padding: 0 20px 0 0;
+    text-align: center;
+    margin-bottom: 32px;
+    img {
+      max-width: 400px;
+      box-shadow: 0px 0 6px 0px #00000042;
+    }
+  }
   .date {
     margin-bottom: 16px;
-    opacity: .7;
+    opacity: 0.7;
   }
 
-  .description  {
+  .description {
     p {
       margin-bottom: 16px;
     }
