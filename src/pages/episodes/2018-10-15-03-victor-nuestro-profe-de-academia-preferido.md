@@ -7,6 +7,7 @@ description: >-
   me dices freak, lo veo todo y Metal Jukebox, amigo y compañero de Radio Espai
   Jove. 
 linkaudio: 'https://api.spreaker.com/v2/episodes/15968654/download.mp3'
+cover: /img/03-fiambrera.jpg
 tags:
   - pod
 ---
