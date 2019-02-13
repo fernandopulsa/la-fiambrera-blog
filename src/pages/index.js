@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
-import portada from "../img/portadas/01-rodri.jpg";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -15,7 +14,7 @@ export default class IndexPage extends React.Component {
           <div className="">
             {posts.map(({ node: post }) => (
               <div className="podcast_wrapper_item" key={post.id}>
-                <div className="qq">
+                <div className="cover_wrapper">
                   <img src={post.frontmatter.cover} alt="" srcset="" />
                 </div>
                 <div className="info_wrapper">

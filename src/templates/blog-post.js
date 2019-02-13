@@ -14,7 +14,8 @@ export const BlogPostTemplate = ({
   linkaudio,
   title,
   helmet,
-  date
+  date,
+  cover
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -24,6 +25,9 @@ export const BlogPostTemplate = ({
       <div className="">
         <div className="">
           <div className="">
+            <div className="cover_wrapper">
+              <img src={cover} alt="" srcset="" />
+            </div>
             <h1 className="title color_corpo">{title}</h1>
             <p className="date">{date}</p>
             <PostContent content={content} className="description" />
@@ -73,6 +77,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         date={post.frontmatter.date}
+        cover={post.frontmatter.cover}
       />
     </Layout>
   );
