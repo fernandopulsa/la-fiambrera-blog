@@ -2,11 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Img from "gatsby-image";
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
+    console.log("TCL: IndexPage -> render -> data", data);
     const { edges: posts } = data.allMarkdownRemark;
+    // const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <Layout>
@@ -15,7 +18,13 @@ export default class IndexPage extends React.Component {
             {posts.map(({ node: post }) => (
               <div className="podcast_wrapper_item" key={post.id}>
                 <div className="cover_wrapper">
-                  <img src={post.frontmatter.cover} alt="" srcset="" />
+                  <Img
+                    fluid={{
+                      ...post.frontmatter.cover.childImageSharp.fluid,
+                      aspectRatio: 1 / 1
+                    }}
+                    // imgStyle={{ width: "100%", height: "auto" }}
+                  />
                 </div>
                 <div className="info_wrapper">
                   <p className="title">
@@ -68,7 +77,13 @@ export const pageQuery = graphql`
             title
             linkaudio
             templateKey
-            cover
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 700) {
+                  src
+                }
+              }
+            }
             date(formatString: "DD MMMM, YYYY")
           }
         }
