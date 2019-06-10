@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Img from "gatsby-image";
 
 export const BlogPostTemplate = ({
   content,
@@ -26,7 +27,12 @@ export const BlogPostTemplate = ({
         <div className="">
           <div className="">
             <div className="cover_wrapper">
-              <img src={cover} alt="" srcset="" />
+              <Img
+                fluid={{
+                  ...cover.childImageSharp.fluid,
+                  aspectRatio: 1 / 1
+                }}
+              />
             </div>
             <h1 className="title color_corpo">{title}</h1>
             <p className="date">{date}</p>
@@ -59,7 +65,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   linkaudio: PropTypes.string,
   title: PropTypes.string,
-  date: PropTypes.date,
+  date: PropTypes.any,
   helmet: PropTypes.instanceOf(Helmet)
 };
 
@@ -102,7 +108,13 @@ export const pageQuery = graphql`
         description
         linkaudio
         tags
-        cover
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              src
+            }
+          }
+        }
       }
     }
   }
