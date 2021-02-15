@@ -11,7 +11,7 @@ description: >+
   noticia chorra y encima, nos ponemos hasta serios y todo.
 
 linkaudio: 'https://api.spreaker.com/v2/episodes/19955014/download.mp3'
-cover: /img/mesa-de-trabajo-1-copia-14.jpg
+cover: ../../../static/img/mesa-de-trabajo-1-copia-14.jpg
 tags:
   - pod
 ---
