@@ -9,7 +9,7 @@ description: >-
   obra poética y de su futura novela. Coged un té calentito, que esta entrevista
   es de las de disfrutar lentamente.
 linkaudio: 'https://api.spreaker.com/v2/episodes/17649041/download.mp3'
-cover: /img/18-fiambrera.jpg
+cover: ../../../static/img/18-fiambrera.jpg
 tags:
   - pod
 ---

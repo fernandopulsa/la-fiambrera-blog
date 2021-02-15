@@ -7,7 +7,7 @@ description: >-
   este episodio traemos a Carla, una amiga del programa, que nos cuenta su
   experiencia en varios proyectos solidarios.
 linkaudio: 'https://api.spreaker.com/v2/episodes/16095512/download.mp3'
-cover: /img/05-fiambrera.jpg
+cover: ../../../static/img/05-fiambrera.jpg
 tags:
   - pod
 ---
