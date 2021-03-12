@@ -6,7 +6,7 @@ import twitter from '../img/twitter.svg'
 import insta from '../img/instagram-logo.svg'
 
 const Navbar = () => (
-  <nav>
+  <nav className="nav">
       <div className="logo_wrapper">
         {/* <Link to="/" className="title">
             <img src={logo} alt="logo" className="logo-img" />

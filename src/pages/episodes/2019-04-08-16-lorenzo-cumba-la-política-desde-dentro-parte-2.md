@@ -7,7 +7,7 @@ description: >
   politico de referencia, militante en Compromís. Si os gusto la primera parte,
   dadle caña a esta segunda y si no la has escuchado ¡Pues ya estas tardando! 
 linkaudio: 'https://www.spreaker.com/user/6600758/17-mezcla'
-cover: /img/17-fiambrera.jpg
+cover: ../../../static/img/17-fiambrera.jpg
 tags:
   - pod
 ---

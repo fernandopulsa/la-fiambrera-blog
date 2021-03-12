@@ -11,7 +11,6 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
-  //tags,
   linkaudio,
   title,
   helmet,
@@ -40,18 +39,6 @@ export const BlogPostTemplate = ({
             <div className="audio_wrapper">
               <audio src={linkaudio} controls />
             </div>
-            {/* {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null} */}
           </div>
         </div>
       </div>
@@ -80,7 +67,6 @@ const BlogPost = ({ data }) => {
         description={post.frontmatter.description}
         linkaudio={post.frontmatter.linkaudio}
         helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
-        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         date={post.frontmatter.date}
         cover={post.frontmatter.cover}
@@ -107,7 +93,6 @@ export const pageQuery = graphql`
         title
         description
         linkaudio
-        tags
         cover {
           childImageSharp {
             fluid(maxWidth: 700) {

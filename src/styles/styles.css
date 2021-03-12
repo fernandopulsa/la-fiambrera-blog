@@ -1,0 +1,9 @@
+/* Holiiiiiiii */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+@import "./reset.css";
+@import "./all.css";
+@import "./nav.css";
+
+:root {
+    --corpo: #db2e21;
+}
